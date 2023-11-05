@@ -3,9 +3,7 @@
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks.push({content: newTaskContent});
         render();
     };
 
@@ -28,7 +26,6 @@
         });
     };
 
-
     const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
@@ -39,7 +36,6 @@
         });
     };
 
-
     const render = () => {
         let htmlString = "";
 
@@ -48,13 +44,13 @@
               <li
               class="tasks__item js-task"
               >
-              
+
               <button class="tasks__button tasks__button--toggleDone js-toggleDone">
                 ${task.done ? "✔" : ""}
               </button>
-            
+
               <span class="${task.done ? "tasks__content--done" : ""}" >
-              ${task.content}
+                ${task.content}
               </span>
               <button class="tasks__button tasks__button--remove js-remove"> 🗑</button>
 
@@ -81,8 +77,7 @@
         newTaskElement.focus();
     };
 
-
-       const init = () => {
+    const init = () => {
         render();
 
         const form = document.querySelector(".js-form");
