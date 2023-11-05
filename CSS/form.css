@@ -12,6 +12,7 @@
 
 .form__newTask {
     padding: 10px;
+    border-radius: 20px;
 }
 
 .form__button {
